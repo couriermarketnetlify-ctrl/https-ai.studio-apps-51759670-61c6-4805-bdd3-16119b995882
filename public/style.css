@@ -194,3 +194,8 @@ input {
   margin: 0;
   vertical-align: middle;
 }
+header {
+  background: url('banner.png') center/cover no-repeat;
+  padding: 20px 40px;
+  border-bottom: 1px solid #1e293b;
+}
