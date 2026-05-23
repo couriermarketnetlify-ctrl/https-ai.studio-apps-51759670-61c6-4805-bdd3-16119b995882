@@ -181,3 +181,16 @@ input {
   color: #22d3ee;
   text-decoration: none;
 }
+.logo {
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.navbar h1 {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0;
+  vertical-align: middle;
+}
