@@ -1,0 +1,4 @@
+header {
+  background: url('banner.png') center/cover no-repeat;
+  padding: 20px 40px;
+}
