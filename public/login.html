@@ -2,34 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sign Up - Courier Market</title>
+  <title>Courier Market Portal Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <h1>Courier Market</h1>
-    <p>Create your account to start generating labels.</p>
-  </header>
+<body class="dark-theme">
+  <div class="container">
+    <div class="left-panel">
+      <div class="brand">
+        <img src="logo.png" alt="Courier Market Logo" class="logo">
+        <h1>COURIER MARKET</h1>
+        <p class="subtitle">GLOBAL FREIGHT ENGINE</p>
+      </div>
 
-  <main>
-    <form>
-      <label>Full Name:</label><br>
-      <input type="text" placeholder="Enter your full name" required><br><br>
+      <h2>Enterprise Logistics</h2>
+      <h3><span class="highlight">Powering Global Trade</span></h3>
+      <p class="description">
+        Experience Courier Market's high‑performance digital gateway. Real‑time rates, smart address‑mapping, public ledger cryptographic payments, and instant label print generation.
+      </p>
 
-      <label>Email:</label><br>
-      <input type="email" placeholder="Enter your email" required><br><br>
+      <div class="metrics">
+        <div><strong>24/7</strong><br>Global Coverage</div>
+        <div><strong>0.02s</strong><br>Routing Latency</div>
+        <div><strong>100%</strong><br>Secure Vaults</div>
+      </div>
 
-      <label>Password:</label><br>
-      <input type="password" placeholder="Create a password" required><br><br>
+      <div class="notice">
+        Authorized personnel only. Sessions are dynamically verified using end‑to‑end hardware‑isolated environment metrics.
+      </div>
+    </div>
 
-      <button type="submit">Create Account</button>
-    </form>
-    <p>Already have an account? <a href="login.html">Login here</a></p>
-  </main>
+    <div class="right-panel">
+      <div class="login-box">
+        <p class="version">LOGISTICS PORTAL<br><span>v4.9.2 PRO</span></p>
+        <h2>Portal Login</h2>
+        <p>Enter your Courier Market credentials to access the logistics engine.</p>
 
-  <footer>
-    <p>&copy; 2026 Courier Market</p>
-  </footer>
+        <form>
+          <label>Email Address</label>
+          <input type="email" placeholder="email@company.com" required>
+
+          <label>Secure Password</label>
+          <input type="password" placeholder="••••••••" required>
+
+          <button type="submit" class="login-btn">Secure Log In →</button>
+        </form>
+
+        <p class="switch">Don’t have an enterprise ID? <a href="signup.html">Switch to Sign Up</a></p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
