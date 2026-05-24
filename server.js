@@ -35,7 +35,7 @@ app.post("/login", (req, res) => {
   }
 });
 
-// Protected dashboard
+// Dashboard route (protected)
 app.get("/dashboard", (req, res) => {
   if (!req.session.user) {
     return res.redirect("/login.html");
@@ -43,4 +43,9 @@ app.get("/dashboard", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "dashboard.html"));
 });
 
-app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+// Logout route
+app.get("/logout", (req, res) => {
+  req.session.destroy(() => {
+    res.redirect("/login.html");
+  });
+});
