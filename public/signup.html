@@ -12,19 +12,16 @@
   </header>
 
   <main>
-    <form>
-      <h2>Create Account</h2>
-      <label>Full Name</label>
-      <input type="text" placeholder="Enter your full name" required>
+   <form action="/signup" method="POST">
+  <label>Full Name</label>
+  <input type="text" name="name" required>
+  <label>Email</label>
+  <input type="email" name="email" required>
+  <label>Password</label>
+  <input type="password" name="password" required>
+  <button type="submit">Sign Up</button>
+</form>
 
-      <label>Email</label>
-      <input type="email" placeholder="Enter your email" required>
-
-      <label>Password</label>
-      <input type="password" placeholder="Create a password" required>
-
-      <button type="submit">Sign Up</button>
-    </form>
     <p>Already have an account? <a href="login.html">Login here</a></p>
   </main>
 </body>
