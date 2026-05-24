@@ -9,24 +9,19 @@
 <body>
   <header>
     <h1>Courier Market</h1>
-    <p>Track your package status below.</p>
   </header>
 
   <main>
-    <form>
-      <label>Tracking Number:</label><br>
-      <input type="text" placeholder="Enter your tracking number" required><br><br>
-      <button type="submit">Track Package</button>
+    <form id="tracking-form">
+      <h2>Track Package</h2>
+      <label>Tracking Number</label>
+      <input type="text" placeholder="Enter your tracking number" required>
+      <button type="submit">Track</button>
     </form>
 
-    <div id="tracking-result">
-      <p>Tracking unavailable. No label has been created for this package.</p>
-    </div>
+    <div id="tracking-result"></div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Courier Market</p>
-  </footer>
   <script src="tracking.js"></script>
 </body>
 </html>
