@@ -1,0 +1,12 @@
+public/
+ ├── index.html        (homepage)
+ ├── login.html        (login form)
+ ├── signup.html       (signup form)
+ ├── tracking.html     (tracking form)
+ ├── dashboard.html    (protected dashboard page)
+ ├── style.css         (shared theme, light/dark mode)
+ ├── logo.png          (branding)
+ ├── banner.png        (optional header graphic)
+ └── favicon.ico       (browser tab icon)
+server.js              (backend logic)
+package.json           (dependencies + start script)
