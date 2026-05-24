@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const session = require("express-session");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -14,18 +15,18 @@ app.use(session({
   saveUninitialized: true
 }));
 
-// Fake signup route
+// Signup route
 app.post("/signup", (req, res) => {
   const { name, email, password } = req.body;
-  // Normally save to DB
+  // Normally save to DB here
   req.session.user = { name, email };
   res.redirect("/dashboard");
 });
 
-// Fake login route
+// Login route
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
-  // Normally check DB
+  // Normally check DB here
   if (email === "test@courier.com" && password === "1234") {
     req.session.user = { email };
     res.redirect("/dashboard");
@@ -34,7 +35,7 @@ app.post("/login", (req, res) => {
   }
 });
 
-// Dashboard route (protected)
+// Protected dashboard
 app.get("/dashboard", (req, res) => {
   if (!req.session.user) {
     return res.redirect("/login.html");
