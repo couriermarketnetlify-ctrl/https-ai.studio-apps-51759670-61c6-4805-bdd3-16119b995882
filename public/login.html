@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Login - Courier Market</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Courier Market</h1>
-  </header>
+<form action="/login" method="POST">
+  <label>Email</label>
+  <input type="email" name="email" required>
 
-  <main>
-    <form>
-      <h2>Login</h2>
-      <label>Email</label>
-      <input type="email" placeholder="Enter your email" required>
+  <label>Password</label>
+  <input type="password" name="password" required>
 
-      <label>Password</label>
-      <input type="password" placeholder="Enter your password" required>
-
-      <button type="submit">Login</button>
-    </form>
-    <p>Don’t have an account? <a href="signup.html">Sign up here</a></p>
-  </main>
-</body>
-</html>
+  <button type="submit">Login</button>
+</form>
