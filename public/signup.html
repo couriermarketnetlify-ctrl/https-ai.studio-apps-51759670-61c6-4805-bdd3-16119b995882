@@ -26,3 +26,14 @@
   </main>
 </body>
 </html>
+<button id="logoutBtn">Logout</button>
+
+<script>
+document.getElementById("logoutBtn").addEventListener("click", async () => {
+  const res = await fetch("/.netlify/functions/logout");
+  const data = await res.json();
+  if (data.success) {
+    window.location.href = data.redirect;
+  }
+});
+</script>
