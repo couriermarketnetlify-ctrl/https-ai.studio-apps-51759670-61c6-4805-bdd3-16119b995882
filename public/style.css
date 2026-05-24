@@ -1,48 +1,87 @@
+:root {
+  /* Light mode */
+  --bg-color: #f9fafb;
+  --text-color: #0b1f3b;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --input-text: #0b1f3b;
+  --accent-color: #1f6feb;
+  --secondary-color: #06b6d4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode */
+    --bg-color: #0b1220;
+    --text-color: #e5e7eb;
+    --card-bg: #1e293b;
+    --input-bg: #0f172a;
+    --input-text: #ffffff;
+    --accent-color: #3b82f6;
+    --secondary-color: #22d3ee;
+  }
+}
+
+
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
-  padding: 0;
-  background: #f5f7fb;
-  color: #111827;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-header, footer {
-  background: #0b1f3b;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+h1, h2, h3, label {
+  font-weight: 700;
+  color: var(--text-color);
 }
 
-main {
-  padding: 20px;
-}
 form {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  padding: 40px;
+  max-width: 500px;
+  margin: 40px auto;
+  transition: background-color 0.3s ease;
 }
 
-input, button {
+input {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 14px;
+  margin: 10px 0 20px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input::placeholder {
+  color: #94a3b8;
 }
 
 button {
-  background: #1f6feb;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
   color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
   border: none;
-  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0 4px 12px rgba(31,111,235,0.3);
+  transition: background 0.3s ease;
 }
 
 button:hover {
   opacity: 0.9;
+}
+
+
 }
 body.dark-theme {
   font-family: 'Inter', sans-serif;
@@ -198,4 +237,7 @@ header {
   background: url('banner.png') center/cover no-repeat;
   padding: 20px 40px;
   border-bottom: 1px solid #1e293b;
+}
+body, form, input, button {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
