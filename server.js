@@ -4,6 +4,8 @@ const session = require("express-session");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
